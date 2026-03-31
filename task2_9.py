@@ -1,0 +1,10 @@
+import cv2
+image1 = cv2.imread('image.png')
+image2 = cv2.imread('image.png')
+image2_resized = cv2.resize(image2, (image1.shape[1], image1.shape[0]))
+added = cv2.add(image1, image2_resized)
+subtracted = cv2.subtract(image1, image2_resized)
+cv2.imshow('Added', added)
+cv2.imshow('Subtracted', subtracted)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
